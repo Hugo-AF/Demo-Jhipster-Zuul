@@ -4,7 +4,7 @@
       "packageName": "org.jhipster.store",
       "nativeLanguage": "en"
     },
-    "jhipsterVersion": "4.5.4",
+    "jhipsterVersion": "4.9.0",
     "baseName": "store",
     "packageName": "org.jhipster.store",
     "packageFolder": "org/jhipster/store",
@@ -21,7 +21,8 @@
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSocialSignIn": false,
-    "jwtSecretKey": "ea21b5b635606be4d7937e29926166e0ee56abb1",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "75e5e29e3fdc2d238b4f3df7004d6feadfbc4779",
     "enableTranslation": true,
     "applicationType": "microservice",
     "testFrameworks": [
@@ -33,7 +34,7 @@
     "nativeLanguage": "en",
     "languages": [
       "en",
-      "es"
+      "fr"
     ],
     "clientPackageManager": "yarn"
   }

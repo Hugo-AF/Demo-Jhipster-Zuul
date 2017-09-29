@@ -1,0 +1,27 @@
+{
+    "blogApp": {
+        "content" : {
+            "home": {
+                "title": "Contents",
+                "createLabel": "Create a new Content",
+                "createOrEditLabel": "Create or edit a Content",
+                "search": "Search for Content"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Content {{ id }}?"
+            },
+            "detail": {
+                "title": "Content"
+            },
+            "name": "Name",
+            "options": "Options"
+        }
+    },
+    "storeApp": {
+        "content" : {
+            "created": "A new Content is created with identifier {{ param }}",
+            "updated": "A Content is updated with identifier {{ param }}",
+            "deleted": "A Content is deleted with identifier {{ param }}"
+        }
+    }
+}

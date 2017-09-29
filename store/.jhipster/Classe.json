@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "cours",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "classe",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "store",
+    "searchEngine": false
+}

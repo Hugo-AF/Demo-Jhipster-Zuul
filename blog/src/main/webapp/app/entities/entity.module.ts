@@ -1,17 +1,17 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { BlogBlogModule } from './blog/blog.module';
-import { BlogEntryModule } from './entry/entry.module';
-import { BlogTagModule } from './tag/tag.module';
 import { BlogProductModule } from './product/product.module';
+import { BlogContentModule } from './content/content.module';
+import { BlogClasseModule } from './classe/classe.module';
+import { BlogPersonnesModule } from './personnes/personnes.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
     imports: [
-        BlogBlogModule,
-        BlogEntryModule,
-        BlogTagModule,
         BlogProductModule,
+        BlogContentModule,
+        BlogClasseModule,
+        BlogPersonnesModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

@@ -1,0 +1,27 @@
+{
+    "blogApp": {
+        "personnes" : {
+            "home": {
+                "title": "Personnes",
+                "createLabel": "Create a new Personnes",
+                "createOrEditLabel": "Create or edit a Personnes",
+                "search": "Search for Personnes"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Personnes {{ id }}?"
+            },
+            "detail": {
+                "title": "Personnes"
+            },
+            "nom": "Nom",
+            "age": "Age"
+        }
+    },
+    "storeApp": {
+        "personnes" : {
+            "created": "A new Personnes is created with identifier {{ param }}",
+            "updated": "A Personnes is updated with identifier {{ param }}",
+            "deleted": "A Personnes is deleted with identifier {{ param }}"
+        }
+    }
+}

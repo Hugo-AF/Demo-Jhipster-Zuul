@@ -20,6 +20,7 @@
     "dto": "no",
     "service": "no",
     "entityTableName": "product",
+    "jpaMetamodelFiltering": false,
     "pagination": "pagination",
     "microserviceName": "store",
     "searchEngine": false

@@ -10,6 +10,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  */
 @SuppressWarnings("unused")
 @Repository
-public interface ProductRepository extends MongoRepository<Product,String> {
-    
+public interface ProductRepository extends MongoRepository<Product, String> {
+
 }

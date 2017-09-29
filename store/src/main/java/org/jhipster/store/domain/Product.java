@@ -3,7 +3,6 @@ package org.jhipster.store.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -12,12 +11,10 @@ import java.util.Objects;
 /**
  * A Product.
  */
-
 @Document(collection = "product")
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
     @Id
     private String id;
 
@@ -29,6 +26,7 @@ public class Product implements Serializable {
     @Field("price")
     private BigDecimal price;
 
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
     }
@@ -62,6 +60,7 @@ public class Product implements Serializable {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {

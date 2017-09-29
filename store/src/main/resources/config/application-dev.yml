@@ -3,8 +3,8 @@
 #
 # This configuration overrides the application.yml file.
 #
-# More information on profiles: https://jhipster.github.io/profiles/
-# More information on configuration properties: https://jhipster.github.io/common-application-properties/
+# More information on profiles: http://www.jhipster.tech/profiles/
+# More information on configuration properties: http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -74,20 +74,21 @@ server:
 # ===================================================================
 # JHipster specific properties
 #
-# Full reference is available at: https://jhipster.github.io/common-application-properties/
+# Full reference is available at: http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 jhipster:
     http:
         version: V_1_1 # To use HTTP/2 you will need SSL support (see above the "server.ssl" configuration)
-    # CORS is only enabled by default with the "dev" profile, so BrowserSync can access the API
-    cors:
-        allowed-origins: "*"
-        allowed-methods: GET, PUT, POST, DELETE, OPTIONS
-        allowed-headers: "*"
-        exposed-headers:
-        allow-credentials: true
-        max-age: 1800
+    # CORS is disabled by default on microservices, as you should access them through a gateway.
+    # If you want to enable it, please uncomment the configuration below.
+    # cors:
+        # allowed-origins: "*"
+        # allowed-methods: "*"
+        # allowed-headers: "*"
+        # exposed-headers: "Authorization"
+        # allow-credentials: true
+        # max-age: 1800
     security:
         authentication:
             jwt:
@@ -121,13 +122,14 @@ jhipster:
             enabled: false
             # edit spring.metrics.export.delay-millis to set report frequency
 
+
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
 # to have type-safe configuration, like in the JHipsterProperties above
 #
 # More documentation is available at:
-# https://jhipster.github.io/common-application-properties/
+# http://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 application:

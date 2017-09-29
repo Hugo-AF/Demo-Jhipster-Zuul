@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory
 import scala.concurrent.duration._
 
 /**
- * Performance test for the Product entity.
+ * Performance test for the Content entity.
  */
-class ProductGatlingTest extends Simulation {
+class ContentGatlingTest extends Simulation {
 
     val context: LoggerContext = LoggerFactory.getILoggerFactory.asInstanceOf[LoggerContext]
     // Log all HTTP requests
@@ -42,7 +42,7 @@ class ProductGatlingTest extends Simulation {
         "Authorization" -> "${access_token}"
     )
 
-    val scn = scenario("Test the Product entity")
+    val scn = scenario("Test the Content entity")
         .exec(http("First unauthenticated request")
         .get("/api/account")
         .headers(headers_http)
@@ -60,26 +60,26 @@ class ProductGatlingTest extends Simulation {
         .check(status.is(200)))
         .pause(10)
         .repeat(2) {
-            exec(http("Get all products")
-            .get("/store/api/products")
+            exec(http("Get all contents")
+            .get("/store/api/contents")
             .headers(headers_http_authenticated)
             .check(status.is(200)))
             .pause(10 seconds, 20 seconds)
-            .exec(http("Create new product")
-            .post("/store/api/products")
+            .exec(http("Create new content")
+            .post("/store/api/contents")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "name":"SAMPLE_TEXT", "price":null}""")).asJSON
+            .body(StringBody("""{"id":null, "name":"SAMPLE_TEXT", "options":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
-            .check(headerRegex("Location", "(.*)").saveAs("new_product_url"))).exitHereIfFailed
+            .check(headerRegex("Location", "(.*)").saveAs("new_content_url"))).exitHereIfFailed
             .pause(10)
             .repeat(5) {
-                exec(http("Get created product")
-                .get("/store${new_product_url}")
+                exec(http("Get created content")
+                .get("/store${new_content_url}")
                 .headers(headers_http_authenticated))
                 .pause(10)
             }
-            .exec(http("Delete created product")
-            .delete("/store${new_product_url}")
+            .exec(http("Delete created content")
+            .delete("/store${new_content_url}")
             .headers(headers_http_authenticated))
             .pause(10)
         }
@@ -87,6 +87,6 @@ class ProductGatlingTest extends Simulation {
     val users = scenario("Users").exec(scn)
 
     setUp(
-        users.inject(rampUsers(100) over (1 minutes))
+        users.inject(rampUsers(Integer.getInteger("users", 100)) over (Integer.getInteger("ramp", 1) minutes))
     ).protocols(httpConf)
 }

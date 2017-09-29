@@ -1,0 +1,27 @@
+{
+    "blogApp": {
+        "personnes" : {
+            "home": {
+                "title": "Personnes",
+                "createLabel": "Crear nuevo Personnes",
+                "createOrEditLabel": "Crear o editar Personnes",
+                "search": "Search for Personnes"
+            },
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Personnes {{ id }}?"
+            },
+            "detail": {
+                "title": "Personnes"
+            },
+            "nom": "Nom",
+            "age": "Age"
+        }
+    },
+    "storeApp": {
+        "personnes" : {
+            "created": "Un nuevo Personnes ha sido creado con el identificador {{ param }}",
+            "updated": "Un Personnes ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Personnes ha sido eliminado con el identificador {{ param }}"
+        }
+    }
+}
