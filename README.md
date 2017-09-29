@@ -1,3 +1,11 @@
+# Commentaires de Hugo Amodru-Favin
+
+Je suis parti de la démonstration faite ici : https://github.com/oktadeveloper/jhipster-microservices-example/blob/master/TUTORIAL.md
+
+J'ai modifié le registry afin de le mettre à jour. J'ai également supprimé puis recréé les dossiers blog et store.
+
+La suite correspond au readme.md fait par le développeur dont j'ai suivi la démonstration, elle décrit notamment comment lancer les différentes applications.
+
 # JHipster Microservices Example
 
 > A microservice architecture created with JHipster. Uses Spring Cloud, Spring Boot, Angular, and MongoDB for a simple blog/store applications. 
